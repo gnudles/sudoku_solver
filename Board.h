@@ -88,7 +88,7 @@ public:
 	{
 		Status current;
 		current = checkDoubles();
-		if (current == DEAD_END)
+		if (current == SOLVED || current == DEAD_END)
 			return current;
 		current=INVALIDATED;
 		int invalidated=0;
