@@ -46,7 +46,7 @@ void solve_test(short *board)
     sudoku::Solver s(b);
     s.nextSolution();
 	const sudoku::Board& resb=s.solved();
-	if (resb.getValue(0)!=0)
+	if (sudoku::Board(resb).simpleSolve() == sudoku::Board::SOLVED)
 	{
 		printf("Found Solution\n");
 		resb.PrintBoard();
